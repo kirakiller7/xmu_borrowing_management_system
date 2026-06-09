@@ -1,2 +1,41 @@
-# xmu_borrowing_management_system
-A MySQL-based database for XMU shared umbrellas and convenience supplies borrowing management, including E-R design, SQL implementation, testing, and AI recommendation extension.
+# 基于 MySQL 的厦大共享雨具与便民物资借还管理系统设计与实现
+
+本项目基于 MySQL 实现厦大共享雨具与便民物资借还管理系统，包含需求分析、E-R 设计、逻辑结构设计、物理结构设计、数据库实施与测试，并拓展了基于 ALS 矩阵分解的个性化物资推荐模块。
+
+## 项目功能
+
+- 学生、工作人员、用户账号管理
+- 服务点与物资类型管理
+- 具体物资借出与归还
+- 维修记录管理
+- 信用扣分记录管理
+- 操作日志记录
+- 视图查询、存储过程、触发器
+- AI 个性化物资推荐模块
+
+## 运行环境
+
+- MySQL 8.0+
+- Python 3.8+
+- pymysql
+- numpy
+
+## SQL 运行顺序
+
+依次运行 `sql/` 文件夹中的 SQL 文件：
+
+1. `01_创建数据库和表.sql`
+2. `02_测试数据.sql`
+3. `03_extra_constraints.sql`
+4. `04_索引.sql`
+5. `05_视图.sql`
+6. `06_存储过程.sql`
+7. `07_触发器.sql`
+8. `08_测试用例.sql`
+
+## AI 推荐模块运行方式
+
+安装依赖：
+
+```bash
+pip install -r requirements.txt
